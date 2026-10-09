@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b1421"><meta name="description" content="Monitor OTOMOTO used car prices, newly visible listings and changes in saved searches. Buyer-friendly guide, ready-made BMW, Audi and Skoda tasks, and a transparent price estimate.">
+<title>OTOMOTO Price Change Monitor — Used Car Inventory Watch | ForgeFrame</title>
+<link rel="canonical" href="https://reflectme-source.github.io/otomoto-market-monitor-guide/en.html">
+<link rel="alternate" hreflang="pl" href="https://reflectme-source.github.io/otomoto-market-monitor-guide/">
+<link rel="alternate" hreflang="en" href="https://reflectme-source.github.io/otomoto-market-monitor-guide/en.html">
+<link rel="stylesheet" href="./style.css"><link rel="icon" href="./favicon.svg" type="image/svg+xml"><meta property="og:type" content="website">
+<meta property="og:title" content="See what changed on OTOMOTO — without comparing listings by hand">
+<meta property="og:description" content="Monitor public used-car search results for price changes and newly visible listings. Start from practical examples.">
+<meta property="og:url" content="https://reflectme-source.github.io/otomoto-market-monitor-guide/en.html">
+</head><body>
+<header><nav class="wrap" aria-label="Main navigation">
+<a class="brand" href="./en.html"><span class="mark" aria-hidden="true">↗</span>OTOMOTO Change Monitor <small>by ForgeFrame</small></a>
+<div class="links"><a href="#examples">Examples</a><a href="#pricing">Pricing</a><a class="lang" href="./index.html" lang="pl">PL</a></div>
+</nav></header>
+<main>
+<div class="hero"><div class="wrap">
+<div><span class="pill">Used-car inventory intelligence · automation</span>
+<h1>See what changed on OTOMOTO. Without comparing listings by hand.</h1>
+<p class="lead">Watch a saved public search and receive structured events for price changes, newly visible ads and listings no longer present in the result set. For independent dealers, automotive sourcing and market researchers.</p>
+<div class="ctas"><a class="primary" href="https://apify.com/green_amazement/otomoto-change-intelligence?utm_source=github_pages&amp;utm_medium=organic&amp;utm_campaign=otomoto_guide_en" target="_blank" rel="noopener noreferrer">Open the monitor on Apify →</a><a class="secondary" href="#how">See how it works</a></div>
+<div class="benefits"><span>Ready-to-use examples</span><span>No server to manage</span><span>Structured output and integrations</span></div>
+</div>
+<div class="mock" aria-label="Illustrative sample, not live market data">
+<small>Illustrative report · not live data</small><h2>Changes since the previous scan</h2>
+<div class="event"><span class="dot"></span><div><b>Newly visible listing</b><p>Example BMW 3 Series · a car not seen in the previous search snapshot</p></div></div>
+<div class="event"><span class="dot amber"></span><div><b>Price changed</b><p>Example Audi A4 · asking-price difference across successful scans</p></div></div>
+<div class="event"><span class="dot"></span><div><b>No longer in the result set</b><p>This does not confirm that a car has sold or been deleted.</p></div></div>
+</div></div></div>
+<section id="examples"><div class="wrap">
+<div class="kicker">Ready-made use cases</div><h2>Start with a specific car search.</h2>
+<p class="intro">Each example opens a saved Apify task with settings you can customize. Change the model, search filters and run frequency for your workflow.</p>
+<div class="cards">
+<article class="card"><span class="number">01 / SOURCING</span><h3>BMW 3 Series price drops</h3><p>Track new opportunities and changes in asking prices in one model segment without manually comparing search results.</p><a href="https://apify.com/green_amazement/otomoto-change-intelligence/examples/bmw-3-series-price-changes" target="_blank" rel="noopener noreferrer">Open BMW example →</a></article>
+<article class="card"><span class="number">02 / DEALERS</span><h3>Audi A4 market watch</h3><p>Monitor a selected used-car market and feed observed price changes to your own workflow or inventory process.</p><a href="https://apify.com/green_amazement/otomoto-change-intelligence/examples/audi-a4-market-price-watch" target="_blank" rel="noopener noreferrer">Open Audi example →</a></article>
+<article class="card"><span class="number">03 / NEW OFFERS</span><h3>Skoda Octavia search watch</h3><p>Maintain a repeatable snapshot of visible ads in the chosen search with a stable watch identifier.</p><a href="https://apify.com/green_amazement/otomoto-change-intelligence/examples/skoda-octavia-new-listing-monitor" target="_blank" rel="noopener noreferrer">Open Skoda example →</a></article>
+</div></div></section>
+<section class="steps" id="how"><div class="wrap">
+<div class="kicker">First-run workflow</div><h2>Three steps to recurring monitoring.</h2>
+<div class="step-grid">
+<div class="step"><strong>STEP 01</strong><h3>Use a public search URL</h3><p>Copy a filtered OTOMOTO result URL. Choose the maximum pages and number of listings to include.</p></div>
+<div class="step"><strong>STEP 02</strong><h3>Create your baseline</h3><p>The first successful scan records a baseline. Enable “Include current snapshot” to see existing listings immediately; baseline entries are not all new offers.</p></div>
+<div class="step"><strong>STEP 03</strong><h3>Schedule and consume changes</h3><p>Use Apify Schedules for daily or hourly checks. Later scans compare the observed results and emit structured events, which you can export or forward through integrations.</p></div>
+</div></div></section>
+<section class="price-section" id="pricing"><div class="wrap">
+<div class="kicker">Transparent planning</div><h2>Estimate monitoring costs.</h2>
+<p class="intro">This calculator covers only two event-price components: $0.01 per successfully scanned results page and $0.001 per detected listing change. It is not the final Apify invoice.</p>
+<div class="calc">
+<div class="calc-fields">
+<label>Search pages per run<input id="pages" type="number" value="2" min="1" max="100" step="1" inputmode="numeric"></label>
+<label>Runs per day<input id="runs" type="number" value="1" min="1" max="24" step="1" inputmode="numeric"></label>
+<label>Detected changes per month<input id="changes" type="number" value="30" min="0" max="100000" step="1" inputmode="numeric"></label>
+<label>Days per month<input id="days" type="number" value="30" min="1" max="31" step="1" inputmode="numeric"></label>
+</div>
+<div class="calc-output" aria-live="polite"><small>Estimated page + change charges</small><b id="estimate">$0.63</b><strong id="pagesCount">60 scanned source pages / month</strong><p id="calcHint">Excludes any applicable Actor-start, dataset-item and other Apify charges.</p></div>
+</div>
+<p class="note">Final billing depends on the number of successfully parsed pages, detected events, charge limits and current Apify pricing. An estimate is not a payment. <a href="https://apify.com/green_amazement/otomoto-change-intelligence#pricing" target="_blank" rel="noopener noreferrer">View live pricing on Apify</a>.</p>
+</div></section>
+<section class="faq"><div class="wrap">
+<div class="kicker">Important details</div><h2>Frequently asked questions</h2>
+<details><summary>Will I receive an alert immediately after a price drop?</summary><p>No. This is scan-based, not real-time monitoring. A change is detected on the next scheduled successful scan; timing depends on your selected schedule and source access.</p></details>
+<details><summary>Does a listing disappearing mean the vehicle sold?</summary><p>No. An ad can fall out of the monitored result window or become unavailable for other reasons. A result-set disappearance is not proof of sale or deletion.</p></details>
+<details><summary>Can I send the data to Sheets, Make or n8n?</summary><p>Apify provides datasets, schedules and integrations/webhooks. You can connect them to your workflow; separate configuration on your account may be required.</p></details>
+<details><summary>Does the Actor bypass logins or anti-bot challenges?</summary><p>No. It reads public search-result pages without bypassing access controls. Site changes and access restrictions can impact completeness.</p></details>
+</div></section>
+<section><div class="wrap"><div class="end-cta"><div><h2>Ready to stop comparing listings by hand?</h2><p>Open an example, customize the search and choose a monitoring cadence that fits your work.</p></div><a class="primary" href="https://apify.com/green_amazement/otomoto-change-intelligence" target="_blank" rel="noopener noreferrer">Open on Apify →</a></div></div></section>
+</main>
+<footer><div class="wrap"><span>Independent ForgeFrame guide. Not an official OTOMOTO service or affiliate.</span><span><a href="./index.html" lang="pl">Polski</a> · <a href="./privacy.html">Privacy</a> · <a href="https://apify.com/green_amazement/otomoto-change-intelligence" target="_blank" rel="noopener noreferrer">Apify product</a></span></div></footer>
+<script type="module" src="./calculator.mjs"></script></body></html>

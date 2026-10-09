@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b1421"><meta name="description" content="Monitorowanie cen samochodów na OTOMOTO: wykrywaj nowe ogłoszenia, zmiany cen i zmiany widocznego zestawu ofert. Instrukcja dla dealerów i sprzedawców, przykłady BMW, Audi, Škoda.">
+<title>Monitor cen OTOMOTO — śledzenie ofert i zmian | ForgeFrame</title>
+<link rel="canonical" href="https://reflectme-source.github.io/otomoto-market-monitor-guide/">
+<link rel="alternate" hreflang="en" href="https://reflectme-source.github.io/otomoto-market-monitor-guide/en.html">
+<link rel="alternate" hreflang="pl" href="https://reflectme-source.github.io/otomoto-market-monitor-guide/">
+<link rel="stylesheet" href="./style.css"><link rel="icon" href="./favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website"><meta property="og:title" content="Monitor cen i ogłoszeń OTOMOTO — bez ręcznego porównywania">
+<meta property="og:description" content="Zobacz zmiany cen, nowe oferty i aktualizacje zapisanych wyszukiwań. Gotowe przykłady, przejrzyste limity i instrukcja wdrożenia.">
+<meta property="og:url" content="https://reflectme-source.github.io/otomoto-market-monitor-guide/">
+</head><body>
+<header><nav class="wrap" aria-label="Menu główne">
+<a class="brand" href="./"><span class="mark" aria-hidden="true">↗</span>OTOMOTO Change Monitor <small>by ForgeFrame</small></a>
+<div class="links"><a href="#przyklady">Przykłady</a><a href="#koszt">Koszty</a><a class="lang" href="./en.html" lang="en">EN</a></div>
+</nav></header>
+<main>
+<div class="hero"><div class="wrap">
+<div><span class="pill">Monitoring ofert samochodowych · automatyzacja</span>
+<h1>Zobacz zmiany na OTOMOTO. Bez codziennego porównywania ofert.</h1>
+<p class="lead">Obserwuj zapisane wyszukiwanie i otrzymuj uporządkowane informacje o zmianach cen, nowych ogłoszeniach i ofertach, które przestały pojawiać się w wynikach. Przygotowane z myślą o dealerach, sourcingu i analizie rynku.</p>
+<div class="ctas"><a class="primary" href="https://apify.com/green_amazement/otomoto-change-intelligence?utm_source=github_pages&amp;utm_medium=organic&amp;utm_campaign=otomoto_guide" target="_blank" rel="noopener noreferrer">Uruchom monitor w Apify →</a><a class="secondary" href="#jak-dziala">Zobacz, jak działa</a></div>
+<div class="benefits"><span>Gotowe konfiguracje</span><span>Bez własnego serwera</span><span>Eksport danych i integracje</span></div>
+</div>
+<div class="mock" aria-label="Przykładowy schemat wyniku, nie dane na żywo">
+<small>Przykładowy raport · dane ilustracyjne</small><h2>Zmiany od poprzedniego skanu</h2>
+<div class="event"><span class="dot"></span><div><b>Nowe ogłoszenie</b><p>Przykładowe BMW Seria 3 · oferta widoczna po raz pierwszy</p></div></div>
+<div class="event"><span class="dot amber"></span><div><b>Zmiana ceny</b><p>Przykładowe Audi A4 · różnica ceny wykryta między skanami</p></div></div>
+<div class="event"><span class="dot"></span><div><b>Pozycja nieobecna w wynikach</b><p>Oferta może być poza aktualnym zakresem wyszukiwania; to nie dowód sprzedaży auta.</p></div></div>
+</div></div></div>
+<section id="przyklady"><div class="wrap">
+<div class="kicker">Gotowe zastosowania</div><h2>Wybierz, co chcesz obserwować.</h2>
+<p class="intro">Każdy przykład otwiera zapisane zadanie Apify z ustawieniami do dostosowania. Możesz zmienić model, filtry i częstotliwość uruchamiania.</p>
+<div class="cards">
+<article class="card"><span class="number">01 / SOURCING</span><h3>Nowe BMW Seria 3</h3><p>Obserwuj nowe oferty i obniżki cen na rynku jednego modelu zamiast wielokrotnie porównywać listę ręcznie.</p><a href="https://apify.com/green_amazement/otomoto-change-intelligence/examples/bmw-3-series-price-changes" target="_blank" rel="noopener noreferrer">Otwórz przykład BMW →</a></article>
+<article class="card"><span class="number">02 / DEALER</span><h3>Monitoring Audi A4</h3><p>Śledź zmiany widocznych cen w wybranym segmencie. Wysyłaj uporządkowane zdarzenia do swojego workflow.</p><a href="https://apify.com/green_amazement/otomoto-change-intelligence/examples/audi-a4-market-price-watch" target="_blank" rel="noopener noreferrer">Otwórz przykład Audi →</a></article>
+<article class="card"><span class="number">03 / NOWE OFERTY</span><h3>Nowe Škoda Octavia</h3><p>Utrzymuj listę ogłoszeń pojawiających się w określonym wyszukiwaniu, z powtarzalnym kluczem obserwacji.</p><a href="https://apify.com/green_amazement/otomoto-change-intelligence/examples/skoda-octavia-new-listing-monitor" target="_blank" rel="noopener noreferrer">Otwórz przykład Škoda →</a></article>
+</div></div></section>
+<section class="steps" id="jak-dziala"><div class="wrap">
+<div class="kicker">Od pierwszego uruchomienia</div><h2>Trzy kroki do regularnego monitoringu.</h2>
+<div class="step-grid">
+<div class="step"><strong>KROK 01</strong><h3>Wklej link do wyszukiwania</h3><p>Skopiuj publiczny adres wyników OTOMOTO z wybranymi filtrami. Ustaw limit stron i liczbę monitorowanych ofert.</p></div>
+<div class="step"><strong>KROK 02</strong><h3>Utwórz pierwszy punkt odniesienia</h3><p>Pierwszy udany skan zapisuje bazę. Włącz „Include current snapshot”, by od razu zobaczyć bieżące oferty. Pierwsza baza nie oznacza, że wszystkie auta są nowe.</p></div>
+<div class="step"><strong>KROK 03</strong><h3>Powtarzaj i odbieraj zmiany</h3><p>Skonfiguruj harmonogram dzienny lub godzinowy w Apify. Kolejne skany porównują obserwowany zestaw i zwracają zdarzenia, które można pobrać lub wysłać webhookiem.</p></div>
+</div></div></section>
+<section class="price-section" id="koszt"><div class="wrap">
+<div class="kicker">Przejrzyste planowanie</div><h2>Oszacuj koszt monitorowania.</h2>
+<p class="intro">Poniższy kalkulator pokazuje tylko dwie opłaty zdarzeniowe: 0,01 USD za pomyślny skan strony wyników i 0,001 USD za zmianę ogłoszenia. To nie jest końcowa wycena Apify.</p>
+<div class="calc">
+<div class="calc-fields">
+<label>Strony wyników na uruchomienie<input id="pages" type="number" value="2" min="1" max="100" step="1" inputmode="numeric"></label>
+<label>Uruchomienia dziennie<input id="runs" type="number" value="1" min="1" max="24" step="1" inputmode="numeric"></label>
+<label>Zmiany wykryte miesięcznie<input id="changes" type="number" value="30" min="0" max="100000" step="1" inputmode="numeric"></label>
+<label>Dni w miesiącu<input id="days" type="number" value="30" min="1" max="31" step="1" inputmode="numeric"></label>
+</div>
+<div class="calc-output" aria-live="polite"><small>Szacowane opłaty za strony i zmiany</small><b id="estimate">$0.63</b><strong id="pagesCount">60 skanów stron na miesiąc</strong><p id="calcHint">Nie obejmuje ewentualnych opłat za starty, elementy datasetu i innych pozycji cennika Apify.</p></div>
+</div>
+<p class="note">Ostateczne rozliczenie zależy od rzeczywistej liczby pomyślnie skanowanych stron, wykrytych zmian, limitu opłat i obowiązujących pozycji w Apify. Planowanie nie jest płatnością. <a href="https://apify.com/green_amazement/otomoto-change-intelligence#pricing" target="_blank" rel="noopener noreferrer">Sprawdź aktualny cennik na Apify</a>.</p>
+</div></section>
+<section class="faq"><div class="wrap">
+<div class="kicker">Ważne informacje</div><h2>Najczęstsze pytania</h2>
+<details><summary>Czy dostanę alert od razu po zmianie ceny?</summary><p>Nie w czasie rzeczywistym. Zmiany są wykrywane podczas kolejnego zaplanowanego skanu. Częstotliwość zależy od Twojego harmonogramu i dostępności źródła.</p></details>
+<details><summary>Czy zniknięcie ogłoszenia oznacza sprzedaż auta?</summary><p>Nie. Ogłoszenie mogło wypaść poza monitorowany zestaw wyników, zmienić filtry lub stać się niewidoczne. Zdarzenie nie potwierdza sprzedaży ani usunięcia.</p></details>
+<details><summary>Czy mogę wysyłać wyniki do Google Sheets albo n8n?</summary><p>Apify udostępnia dataset, harmonogramy i integracje/webhooki. Połącz wyniki z własnym workflow. Potrzebna może być osobna konfiguracja integracji na Twoim koncie.</p></details>
+<details><summary>Czy monitor omija logowanie lub CAPTCHA OTOMOTO?</summary><p>Nie. Działa na publicznych stronach wyników i nie obchodzi zabezpieczeń. Zmiany strony lub ograniczenia dostępu mogą wpłynąć na kompletność odczytu.</p></details>
+</div></section>
+<section><div class="wrap"><div class="end-cta"><div><h2>Gotowy, żeby przestać porównywać oferty ręcznie?</h2><p>Otwórz gotowy przykład, dostosuj wyszukiwanie i zdecyduj, jak często chcesz je monitorować.</p></div><a class="primary" href="https://apify.com/green_amazement/otomoto-change-intelligence" target="_blank" rel="noopener noreferrer">Przejdź do Apify →</a></div></div></section>
+</main>
+<footer><div class="wrap"><span>Niezależny przewodnik ForgeFrame. Nie jest oficjalną usługą ani partnerem OTOMOTO.</span><span><a href="./en.html" lang="en">English</a> · <a href="./privacy.html">Prywatność</a> · <a href="https://apify.com/green_amazement/otomoto-change-intelligence" target="_blank" rel="noopener noreferrer">Produkt Apify</a></span></div></footer>
+<script type="module" src="./calculator.mjs"></script></body></html>
